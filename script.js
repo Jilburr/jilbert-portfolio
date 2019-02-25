@@ -43,13 +43,3 @@ portfolioTag.addEventListener('click', event => {
     behavior: 'smooth'
   })
 })
-
-// $('.portfolioList ul li').on('mouseenter', function() {
-//   liId = this.id
-// 	$('.portfolioSection').css('background', portfolioImg[liId].url)
-// })
-
-// $('.portfolioList ul li').on('mouseleave', function() {
-//   liId = this.id
-// 	$('.portfolioSection').css('background', 'white')
-// })

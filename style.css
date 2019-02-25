@@ -62,7 +62,8 @@
 
 body {
   background-color: #fa7268;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .content {
@@ -73,7 +74,7 @@ body {
   right: 0;
   position: fixed;
   transition: transform 0.5s;
-  box-shadow: 3px 0px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 0px 40px rgb(85, 26, 139, 0.7);
   z-index: 1;
 }
 
@@ -136,21 +137,6 @@ h2 {
   display: inline-block;
   position: relative;
 }
-
-/* .subtitel h2 a:after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  height: 0.05em;
-  background-color: currentColor;
-  width: 0;
-  transition: width 0.3s, left 0.3s;
-} */
-
-/* .subtitel h2 a:hover:after {
-  width: 100%;
-} */
 
 .subtitel h2 a:hover .spanOdd {
   transform: translateY(-5px) rotate(-10deg);
@@ -226,6 +212,36 @@ a.toggle-nav img {
   transition: all 0.3s ease-in;
 }
 
+.portfolioLink {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 21px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: white;
+
+  margin: 20px;
+  position: fixed;
+  top: 9px;
+  right: 80px;
+}
+
+.portfolioLink:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  background-color: rgba(85, 26, 139, 0.65);
+  width: 0;
+  transition: width 0.3s, left 0.3s;
+}
+
+.portfolioLink:hover:after {
+  width: 75%;
+}
+
 nav {
   position: fixed;
   background-color: white;
@@ -292,26 +308,22 @@ nav li a {
 nav li a:after {
   content: '';
   position: absolute;
-  bottom: -3px;
+  bottom: 0;
   left: 0;
-  height: 0.05em;
-  background-color: currentColor;
+  height: 5px;
+  background-color: rgba(85, 26, 139, 0.65);
   width: 0;
   transition: width 0.3s, left 0.3s;
 }
 
 nav li a:hover:after {
-  width: 100%;
+  width: 75%;
   font-weight: 700;
 }
 
 /* --- Media Query --- */
 
 @media (max-width: 1440px) {
-  .content {
-    overflow-y: scroll;
-  }
-
   header {
     white-space: normal;
   }

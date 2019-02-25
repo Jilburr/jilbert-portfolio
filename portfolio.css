@@ -1,0 +1,95 @@
+.portfolioSection {
+  position: relative;
+
+  margin-top: 100vh;
+  top: 0;
+  left: 0;
+  height: 100vh;
+
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0px -2px 20px 2px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+}
+
+.portfolioList {
+  margin-left: 16vw;
+  transform: translateY(-50%);
+  position: absolute;
+  margin-top: 50vh;
+}
+
+.portfolioList img {
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  left: 200%;
+  transform: translate(-50%, -50%);
+  max-width: 1000px;
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+  z-index: -1;
+}
+
+.portfolioList li:hover img {
+  opacity: 1;
+  left: 125%;
+}
+
+.portfolioSection .portfolioList h3 a {
+  display: inline-block;
+  position: relative;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 96px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #551a8b;
+}
+
+.portfolioSection .portfolioList h3 a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 35px;
+  background-color: rgba(250, 114, 104, 0.65);
+  width: 0;
+  transition: width 0.3s, left 0.3s;
+}
+
+.portfolioSection .portfolioList h3 a:hover:after {
+  width: 75%;
+}
+
+/* --- Media Query --- */
+
+@media (min-width: 1650px) {
+  .portfolioList li:hover img {
+    left: 160%;
+  }
+}
+
+@media (max-width: 950px) {
+  .portfolioSection .portfolioList h3 a {
+    font-size: 77px;
+  }
+}
+
+@media (max-width: 650px) {
+  .portfolioList li:hover img {
+    opacity: 0;
+    left: 125%;
+  }
+}
+
+@media (max-width: 570px) {
+  .portfolioSection .portfolioList h3 a {
+    font-size: 61px;
+  }
+}
+
+@media (max-width: 510px) {
+  .portfolioSection .portfolioList h3 a {
+    font-size: 50px;
+  }
+}
